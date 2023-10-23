@@ -3,23 +3,25 @@ import styles from "./page.module.css";
 
 const NavBar = () => {
   return (
-      <ul className={styles.ul}>
+    <nav>
+      <ul>
         <li>
           <Link href="/">home</Link>
         </li>
         <li>
           <Link href="/about">about</Link>
         </li>
-        <li className={styles.right}>
+        <li style={{float:"right"}}>
           <Link href="/login">login</Link>
         </li>
       </ul>
+    </nav>
   );
 };
 
 const Home = () => {
   return (
-    <div className={styles.body}>
+    <div>
       <header>
         <NavBar />
       </header>

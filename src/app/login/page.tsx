@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 
 const Login = () => {
@@ -7,6 +8,7 @@ const Login = () => {
         <NavBar />
       </header>
       <main></main>
+      <Footer /> 
     </div>
   );
 };

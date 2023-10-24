@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar"
 
 const About = () => {
@@ -7,6 +8,7 @@ const About = () => {
         <NavBar />
       </header>
       <main></main>
+      <Footer /> 
     </div>
   );
 };

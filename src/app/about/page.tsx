@@ -1,16 +1,12 @@
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar"
 
-const About = () => {
+export default function About() {
   return (
     <div>
-      <header>
-        <NavBar />
-      </header>
+      <NavBar />
       <main></main>
       <Footer /> 
     </div>
   );
 };
-
-export default About;

@@ -1,16 +1,12 @@
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 
-const Login = () => {
+export default function Login() {
   return (
     <div>
-      <header>
-        <NavBar />
-      </header>
+      <NavBar />
       <main></main>
       <Footer /> 
     </div>
   );
 };
-
-export default Login;

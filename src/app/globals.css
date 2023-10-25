@@ -41,3 +41,32 @@ footer {
     align-items: center;
     color: white;
 }
+
+.card {
+    margin-top: 100px;
+}
+
+.card-container {
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 1px solid;
+}
+
+.card-header {
+    padding: 10px;
+    height: 20px;
+    background-color: blueviolet;
+    text-align: center;
+    color: white;
+}
+
+.card-body {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-footer {
+    height: 20px;
+    padding: 10px;
+    background-color: blueviolet;
+}

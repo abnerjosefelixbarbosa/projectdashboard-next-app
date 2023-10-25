@@ -1,16 +1,21 @@
+import Card from "@/components/Card";
 import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar"
+import NavBar from "@/components/NavBar";
 
-const Home = () => {
+export default function Home() {
   return (
     <div>
-      <header>
-        <NavBar />
-      </header>
-      <main></main>
+      <NavBar />
+      <Card>
+        <div className="card-header">
+          Bem vindo !
+        </div>
+        <div className="card-body">
+          Para iniciar, faça login.
+        </div>
+        <div className="card-footer"></div>
+      </Card>
       <Footer />
     </div>
   );
-};
-
-export default Home;
+}

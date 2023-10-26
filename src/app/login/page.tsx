@@ -4,9 +4,13 @@ import NavBar from "@/components/NavBar";
 export default function Login() {
   return (
     <div>
-      <NavBar />
+      <header>
+        <NavBar />
+      </header>
       <main></main>
-      <Footer /> 
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
-};
+}

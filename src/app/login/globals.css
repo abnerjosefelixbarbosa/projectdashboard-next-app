@@ -29,3 +29,32 @@ nav ul li a {
 nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login-container {
+    margin: 300px;
+
+}
+
+.form-login-hearder {
+    background-color: blueviolet;
+    padding: 20px;
+}
+
+.form-login-fooder {
+    background-color: blueviolet;
+    padding: 20px;
+}
+
+.form-login-body {
+    padding: 10px;
+}
+
+.form-login {
+    width: 100%;
+}

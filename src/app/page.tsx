@@ -1,9 +1,16 @@
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
-import Home from "./home/page";
 
-export default function App() {
+export default function Home() {
   return (
-    <Home />
+    <div>
+      <header>
+        <NavBar />
+      </header>
+      <main></main>
+      <footer>
+        <Footer />
+      </footer>
+    </div>
   );
 }

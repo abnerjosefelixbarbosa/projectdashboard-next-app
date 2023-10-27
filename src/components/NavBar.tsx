@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const NavBar = () => {
+export default function NavBar() {
     return (
       <nav>
         <ul>
@@ -14,5 +14,3 @@ const NavBar = () => {
       </nav>
     );
 };
-
-export default NavBar

@@ -1,18 +1,9 @@
-import Card from "@/components/Card";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
+import Home from "./home/page";
 
-export default function Home() {
+export default function App() {
   return (
-    <div>
-      <header>
-        <NavBar />
-      </header>
-      <main>
-      </main>
-      <footer>
-        <Footer />
-      </footer>
-    </div>
+    <Home />
   );
 }

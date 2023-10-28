@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
+import Link from "next/link"
 
 export default function Login() {
   return (
@@ -22,6 +23,10 @@ export default function Login() {
               </div>
               <div className="center">
                 <button type="submit" className="login-button">Login</button>
+              </div>
+              <br />
+              <div>
+                <Link href="/create-account">Não possui conta?</Link>
               </div>
             </form>
           </div>

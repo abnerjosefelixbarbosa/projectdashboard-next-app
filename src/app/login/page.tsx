@@ -13,18 +13,17 @@ export default function Login() {
           <div className="login-header"></div>
           <div className="login-body">
             <form>
-              <div>
+              <div className="login-form-controller">
                 <label htmlFor="email">Email:</label>
-                <input type="email" name="email" id="email" />
+                <input type="email" name="email" id="email"  />
               </div>
-              <div>
+              <div className="login-form-controller">
                 <label htmlFor="password">Password:</label>
                 <input type="password" name="password" id="password" />
               </div>
               <div className="center">
                 <button type="submit" className="login-button">Login</button>
               </div>
-              <br />
               <div>
                 <Link href="/create-account" className="create-account-link">Não possui conta?</Link>
               </div>

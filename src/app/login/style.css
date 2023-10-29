@@ -58,7 +58,8 @@ nav ul li a:hover {
     padding: 50px;
 }
 
-input {
+.login-form-controller input[type = email],
+.login-form-controller input[type = password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -75,6 +76,7 @@ input {
     border: 0;
     border-radius: 10px;
     color: white;
+    margin: 8px 0;
 }
 
 .create-account-link {

@@ -9,7 +9,7 @@ export default function Login() {
         <NavBar />
       </header>
       <main>
-        <div className="login-container">
+        <section className="login-container">
           <div className="login-header"></div>
           <div className="login-body">
             <form>
@@ -26,12 +26,12 @@ export default function Login() {
               </div>
               <br />
               <div>
-                <Link href="/create-account">Não possui conta?</Link>
+                <Link href="/create-account" className="create-account-link">Não possui conta?</Link>
               </div>
             </form>
           </div>
           <div className="login-fooder"></div>
-        </div>
+        </section>
       </main>
       <footer>
         <Footer />

@@ -76,3 +76,8 @@ input {
     border-radius: 10px;
     color: white;
 }
+
+.create-account-link {
+    text-decoration: none;
+    color: blueviolet;
+}

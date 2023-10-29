@@ -1,10 +1,22 @@
-import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
+
 
 export default function CreateAccount() {
     return (
         <div>
-          <h1>create-account</h1>
+          <main>
+            <section className="create-account-container">
+              <div className=""></div>
+              <div>
+                <form>
+                  <div>
+                    <label htmlFor="email">Email:</label>
+                    <input type="email" id="email" />
+                  </div>
+                </form>
+              </div>
+              <div className=""></div>
+            </section>
+          </main>
         </div>
     );
 }

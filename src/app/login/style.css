@@ -55,7 +55,7 @@ nav ul li a:hover {
 }
 
 .login-body {
-    padding: 50px;
+    padding: 20px;
 }
 
 .login-form-controller input[type = email],

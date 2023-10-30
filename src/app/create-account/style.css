@@ -1,9 +1,49 @@
-
-
 .create-account-container {
     margin-top: 200px !important;
     width: 300px;
     min-height: max-content;
     border: 1px solid black;
     margin: auto;
+}
+
+.create-account-header {
+    background-color: blueviolet;
+    padding: 20px;
+}
+
+.create-account-body {
+    padding: 20px;
+}
+
+.create-account-fooder {
+    background-color: blueviolet;
+    padding: 20px;
+}
+
+.create-account-form-controller input[type = text],
+.create-account-form-controller input[type = email],
+.create-account-form-controller input[type = password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.create-button {
+    width: 50%;
+    padding: 12px 20px;
+    background-color: blueviolet;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    margin: 8px 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

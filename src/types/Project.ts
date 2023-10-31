@@ -6,5 +6,5 @@ export default interface Project {
   startDate: Date;
   endDate: Date;
   budget: number;
-  responsible: Responsible;
+  responsible: Responsible | null;
 }

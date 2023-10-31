@@ -5,5 +5,5 @@ export default interface Responsible {
   name: string;
   email: string;
   password: string;
-  role: Role;
+  role: Role | null;
 }

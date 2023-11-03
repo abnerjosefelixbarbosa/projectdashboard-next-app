@@ -6,17 +6,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 const schema = z.object({
   name: z
-  .string()
-  .min(1, "Name must be at min 1 character")
-  .max(100, "Name must be at max 100 characters"),
+    .string()
+    .max(100, "Name must be at max 100 characters"),
   email: z.string().email("Email is invalid"),
   password: z
     .string()
-    .min(1, "Password must be at min 1 character")
     .max(20, "Password must be at max 20 characters"),
   repeat_password: z
     .string()
-    .min(1, "Password must be at min 1 character")
     .max(20, "Password must be at max 20 characters"),
 });
 
@@ -27,7 +24,7 @@ export default function CreateAccountForm() {
     register,
     handleSubmit,
     setError,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm<Form>({
     mode: "onSubmit",
     reValidateMode: "onSubmit",
@@ -35,15 +32,33 @@ export default function CreateAccountForm() {
   });
 
   function handCreate(data: Form) {
-    if (validateFrom(data)) {
+    if (isValidFrom(data)) {
       console.log(data);
     }
   }
 
-  function validateFrom(data: Form) {
+  function isValidFrom(data: Form) {
+    if (data.name === "") {
+      setError("name", {
+        message: "Name is empty",
+      });
+      return false;
+    }
+    if (data.password === "") {
+      setError("password", {
+        message: "Password is empty",
+      });
+      return false;
+    }
+    if (data.repeat_password === "") {
+      setError("repeat_password", {
+        message: "Repeat Password is empty",
+      });
+      return false;
+    }
     if (data.password !== data.repeat_password) {
       setError("repeat_password", {
-        message: "Password is different"
+        message: "Password is different",
       });
       return false;
     }
@@ -58,17 +73,17 @@ export default function CreateAccountForm() {
           <form onSubmit={handleSubmit(handCreate)}>
             <div className="create-account-form-controller">
               <label htmlFor="name">Name:</label>
-              <input type="text" id="name" {...register("name")} />
+              <input type="text" id="name" autoComplete="on" {...register("name")} />
               <span className="alert">{errors.name?.message}</span>
             </div>
             <div className="create-account-form-controller">
               <label htmlFor="email">Email:</label>
-              <input type="email" id="email" {...register("email")} />
+              <input type="email" id="email" autoComplete="on" {...register("email")} />
               <span className="alert">{errors.email?.message}</span>
             </div>
             <div className="create-account-form-controller">
               <label htmlFor="password">Password:</label>
-              <input type="password" id="password" {...register("password")} />
+              <input type="password" id="password" autoComplete="on" {...register("password")} />
               <span className="alert">{errors.password?.message}</span>
             </div>
             <div className="create-account-form-controller">
@@ -76,6 +91,7 @@ export default function CreateAccountForm() {
               <input
                 type="password"
                 id="repeat-password"
+                autoComplete="on"
                 {...register("repeat_password")}
               />
               <span className="alert">{errors.repeat_password?.message}</span>

@@ -1,9 +1,10 @@
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <header>
         <NavBar />
       </header>
@@ -11,6 +12,6 @@ export default function Home() {
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   );
 }

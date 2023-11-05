@@ -3,7 +3,7 @@ import NavBar from "@/components/NavBar";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <header>
         <NavBar />
       </header>
@@ -11,6 +11,6 @@ export default function Home() {
       <footer>
         <Footer />
       </footer>
-    </div>
+    </>
   );
 }

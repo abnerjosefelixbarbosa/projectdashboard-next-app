@@ -1,11 +1,10 @@
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
-import Link from "next/link"
 import LoginForm from "./components/LoginForm";
 
 export default function Login() {
   return (
-    <div>
+    <>
       <header>
         <NavBar />
       </header>
@@ -15,6 +14,6 @@ export default function Login() {
       <footer>
         <Footer />
       </footer>
-    </div>
+    </>
   );
 }

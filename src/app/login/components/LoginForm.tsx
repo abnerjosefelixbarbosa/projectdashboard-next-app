@@ -1,5 +1,6 @@
 "use client"
 
+import useProject from "@/contexts/useProject";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
@@ -27,10 +28,13 @@ export default function LoginForm() {
     reValidateMode: "onSubmit",
     resolver: zodResolver(schema),
   });
+  const { project } = useProject();
 
   function handLogin(data: FormLogin) {
     if (isValidLoginFrom(data)) {
       console.log(data);
+    } else {
+      console.log(project)
     }
   }
 

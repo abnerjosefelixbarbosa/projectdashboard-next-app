@@ -3,6 +3,8 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import useProject from "@/contexts/useProject";
+import { useRouter } from "next/navigation";
 
 const schema = z.object({
   name: z
@@ -30,10 +32,15 @@ export default function CreateAccountForm() {
     reValidateMode: "onSubmit",
     resolver: zodResolver(schema),
   });
+  const router = useRouter();
+  const { setProject } = useProject();
 
   function handCreate(data: Form) {
     if (isValidFrom(data)) {
       console.log(data);
+    } else {
+      setProject({ id: "1", budget: 100, startDate: new Date(), endDate: new Date(), name: "a", responsible: null });
+      router.push("/login")
     }
   }
 

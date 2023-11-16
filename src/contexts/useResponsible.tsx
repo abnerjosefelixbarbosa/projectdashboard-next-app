@@ -10,7 +10,7 @@ type ContextProps = {
 
 const ResponsibleContext = createContext<ContextProps | null>(null);
 
-export default function useMain() {
+export default function useResponsible() {
   const context = useContext(ResponsibleContext);
 
   if (!context) {
@@ -20,7 +20,7 @@ export default function useMain() {
   return context;
 }
 
-export function MainProvider({ children }: PropsWithChildren) {
+export function ResponsibleProvider({ children }: PropsWithChildren) {
   const [responsible, setResponsible] = useState<Responsible | null>(null);
 
   return (
